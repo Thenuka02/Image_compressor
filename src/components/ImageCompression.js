@@ -119,23 +119,7 @@ const ImageCompression = () =>{
                     onChange={(e) => handle(e)}
                 /> 
                 </Grid>
-                {/* <Grid item xs={12} md={6} lg={6} >
-                <Button  
-                  sx={{ color: '#FFFFFF', backgroundColor: '#006400',
-                  borderRadius: "4px" , display:"fixed", alignItems: "center",
-                      '&:hover': {
-                        backgroundColor: '#2E8B57',
-                        opacity: [0.9, 0.8, 0.7],
-                        },
-                      }}
-                    
-                  onClick={(e) => {
-                    handleCompressImage(e);
-                  }}
-                >
-                  Compress 
-                </Button>
-                  </Grid>   */}
+                
               </Grid>
               <Grid item xs={12} sm={6} md={3} >
                 <Button  
@@ -176,9 +160,9 @@ const ImageCompression = () =>{
              
             {compressedImage && (
 
-            <Button sx={{ textDecoration: "none" ,color: '#FFFFFF', 
+            <Button sx={{ color: '#FFFFFF', 
             backgroundColor: '#9F2B68', borderRadius: "4px" , 
-            display:"fixed",
+            display: "fixed",
             '&:hover': {
             backgroundColor: '#BF40BF',
             opacity: [0.9, 0.8, 0.7],
@@ -187,7 +171,7 @@ const ImageCompression = () =>{
 
             >
 
-            <a  className={classes.download}  download={fileName}>
+            <a  className={classes.download} href={compressedImage} download={fileName}>
               Download 
 
             </a>
